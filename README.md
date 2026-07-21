@@ -1,25 +1,27 @@
 # RJW Ransomware Analysis
 
-> **Disclaimer:** This project was created for educational and security research purposes only. I am sharing my findings to help students and researchers understand ransomware behavior and defense mechanisms.
+> **Disclaimer:** This project is for educational and security research purposes only. The goal is to document ransomware mechanics and help improve threat detection.
 
----
+## Safety Warning
+Do not execute this sample or any related malware binaries on a live host system or personal Windows environment. Running ransomware on a primary OS will result in permanent file loss, system corruption, and potential network propagation. 
 
-## 🛑 SAFETY WARNING
-Do **NOT** run this sample or any related scripts on your main host machine or personal Windows PC. Executing ransomware on a live system will lead to:
-- Permanent encryption and loss of personal files (photos, documents, system files).
-- System crash and potential registry corruption.
-- Risk of spreading across your local Wi-Fi / home network.
+Always conduct malware analysis inside a fully isolated virtual machine (VirtualBox or VMware) with all network adapters disabled.
 
-All analysis must be conducted inside a fully isolated Virtual Machine (VirtualBox/VMware) with networking set to **Disabled** or **Host-Only**.
+## Project Overview
+This repository contains analysis notes and behavioral observations for the RJW ransomware variant.
 
----
+Key Objectives:
+* Observe execution behavior and system modifications in a sandbox.
+* Document indicators of compromise (IOCs) such as file hashes and registry edits.
+* Study potential defensive and mitigation measures.
 
-## 📌 About This Project
-This repository documents my hands-on research on the RJW ransomware variant. The primary goals of this project are:
-* **Behavior Tracking:** Observing how the payload executes and interacts with the Windows environment.
-* **IOC Extraction:** Identifying file hashes, registry modifications, and dropped files.
-* **Defense & Detection:** Studying ways to mitigate, block, and analyze similar malware threats safely.
+![Malware Analysis Screenshot](malware_screenshot.png)
 
----
+## Laboratory Setup
+* Hypervisor: VirtualBox (Isolated Guest OS)
+* Network Configuration: Disabled / Host-Only
+* Analysis Tools: Process Monitor, x64dbg, Wireshark, Ghidra
 
-## 👥 Research Team & Credits
+## References
+* CISA Cybersecurity Advisories
+* MITRE ATT&CK Framework
